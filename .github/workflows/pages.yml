@@ -23,14 +23,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build standalone preview
-        run: python3 scripts/build_pages.py
+      - name: Prepare static files
+        run: |
+          mkdir -p _site/guide
+          cp index.html _site/index.html
+          cp guide/index.html _site/guide/index.html
+          cp -R guide/assets _site/guide/assets
+          touch _site/.nojekyll
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: work/pages
+          path: _site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v5

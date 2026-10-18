@@ -1,25 +1,9 @@
-# Local research, fixtures and generated output
-work/*
-!work/build_preview.py
-!work/source/
-work/source/*
-!work/source/shell.json
-!work/source/catalog-v2.json
-# Historical image crops (unused by the current frontend)
-guide/assets/images/cream.webp
-guide/assets/images/editorial.webp
-guide/assets/images/editorial-hq.png
-guide/assets/images/marble.webp
-guide/assets/images/product-study.webp
-guide/assets/images/routine.webp
-# Machine-specific files / credentials
+_site/
 .env
 .env.*
-!.env.example
 *.pem
 *.key
 *.log
-__pycache__/
 .DS_Store
 Thumbs.db
 .vscode/

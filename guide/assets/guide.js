@@ -1,4 +1,4 @@
-/* TOKATLIANN GUIDE — sequential state model; see docs/REQUIREMENTS.md. */
+/* TOKATLIANN GUIDE — sequential state model. */
 (function(){
  'use strict';
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
