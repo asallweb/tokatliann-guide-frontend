@@ -260,7 +260,10 @@
 
 /* Prepare the first paint before deferred scripts run. No-JS is restored in noscript. */
 @media(prefers-reduced-motion:no-preference) {
- .tg-guide[data-guide-intro="pending"] :is(.tg-guide__heading,.tg-guide__intro-note,.tg-guide__group:not([data-locked="true"]),.tg-guide__factors) { opacity:0; visibility:hidden; transform:translateY(9px); }
+ .tg-guide[data-guide-intro="pending"] :is(.tg-guide__heading,.tg-guide__intro-note,.tg-guide__progress,.tg-guide__group,.tg-guide__factors,.tg-guide__result,.tg-guide__disclaimer) { opacity:0; visibility:hidden; transform:translateY(9px); }
  .tg-guide[data-guide-intro="pending"] .tg-guide__preloader-inner { opacity:0; visibility:hidden; }
  .tg-guide[data-guide-intro="pending"] [data-guide-load-progress] { transform:scaleX(0); }
 }
+
+/* Let GSAP own opacity during entrance; keep the locked steps at their CSS opacity. */
+.tg-guide:is([data-guide-intro="pending"],[data-guide-intro="loading"],[data-guide-intro="entering"]) .tg-guide__group { transition:none; }
