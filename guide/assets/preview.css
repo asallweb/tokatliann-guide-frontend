@@ -1,0 +1,18 @@
+/* Standalone preview reset only. Never include this file in Bitrix. */
+html { min-width:320px; min-height:100%; }
+body { padding:0; margin:0; color:#2b2b2b; background:#faf7f1; font:400 22px/1 Forum,Georgia,'Times New Roman',serif; -webkit-font-smoothing:antialiased; }
+.preview-shell,.preview-shell *,.preview-shell *::before,.preview-shell *::after { box-sizing:border-box; }
+.preview-shell :is(ul,p) { padding:0; margin:0; }
+.preview-shell li { list-style:none; }
+.preview-shell a { color:inherit; text-decoration:none; }
+.preview-shell img { vertical-align:top; }
+.preview-shell button { font:inherit; color:inherit; border:0; background:none; cursor:pointer; }
+.preview-shell a:focus-visible,.preview-shell button:focus-visible { outline:2px solid #6e4c34; outline-offset:4px; }
+.preview-shell .__container { max-width:1920px; margin:auto; padding:0 32px; }
+.preview-shell.header { border-width:0 0 1px; }
+.preview-shell .menu__body { visibility:visible; }
+@media(max-width:110.06125em) {
+ .preview-shell .menu__body { visibility:hidden; }
+ .menu-open .preview-shell .menu__body { visibility:visible; }
+}
+@media(max-width:47.99875em) { .preview-shell .__container { padding-inline:20px; } }

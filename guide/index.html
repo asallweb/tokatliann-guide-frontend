@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Интерактивный гид TOKATLIANN: подбор ухода по состоянию кожи и образу жизни. Локальная демонстрация.">
+<title>GUIDE — подбор ухода | TOKATLIANN</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/site-shell.css">
+<link rel="stylesheet" href="assets/preview.css">
+<link rel="stylesheet" href="assets/guide.css">
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/guide-motion.js" defer></script>
+<script src="assets/guide-data.js" defer></script>
+<script src="assets/guide.js" defer></script>
+<script src="assets/preview.js" defer></script>
+</head><body>
+<!-- Captured production shell: standalone preview only. Bitrix uses its own header/footer. -->
+<header class="preview-shell header">
+			<div class="__container">
+				<div class="header__wrapper">
+					<a href="https://tokatliann.ru/" class="header__logo">
+						<img src="assets/images/tokatliann.svg" alt="tokatliann">
+					</a>
+					<div class="header__menu menu">
+						<button type="button" class="menu__icon icon-menu" aria-label="Открыть меню" aria-expanded="false" aria-controls="preview-menu"><span></span></button>
+						<nav class="menu__body" id="preview-menu" aria-label="Главное меню">
+							<ul class="menu__list">
+	<li class="menu__item"><a href="https://tokatliann.ru/showroom/" class="menu__link ">Шоурум</a></li>
+	<li class="menu__item"><a href="https://tokatliann.ru/about/brand/" class="menu__link ">О бренде</a></li>
+	<li class="menu__item"><a href="https://tokatliann.ru/about/burn/" class="menu__link ">После прочтения — сжечь</a></li>
+	<li class="menu__item"><a href="https://tokatliann.ru/services/transfer/" class="menu__link ">Бьюти-трансфер</a></li>
+	<li class="menu__item"><a href="https://tokatliann.ru/help/" class="menu__link ">Мы поможем</a></li>
+	<li class="menu__item"><a href="https://tokatliann.ru/blog/" class="menu__link ">Блог</a></li>
+</ul>
+						</nav>
+					</div>
+					<div class="header__actions">
+						<div >
+<a href="https://tokatliann.ru/personal/cart/" class="header__shopper">
+    Шопер </a>
+</div>
+						<div class="header__socials">
+							<a href="https://t.me/boost/ynakablookax" class="header__social" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+	<img src="assets/images/telegram.svg" alt="Telegram">
+</a>
+<a href="https://instagram.com/tm.tokatliann" class="header__social" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+	<img src="assets/images/instagram.svg" alt="Instagram">
+</a>
+<a href="https://max.ru/channel_tokatliann" class="header__social" aria-label="MAX" target="_blank" rel="noopener noreferrer">
+	<img src="assets/images/MAX.svg" alt="MAX">
+</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+<main class="tg-guide" id="guide" data-tokatliann-guide>
+  <div class="tg-guide__preloader" data-guide-preloader role="status" aria-label="Загрузка интерактивного гайда">
+    <div class="tg-guide__preloader-inner"><img src="assets/images/tokatliann.svg" alt="TOKATLIANN" width="320" height="36"><span class="tg-guide__preloader-caption">GUIDE</span><span class="tg-guide__preloader-line"><span data-guide-load-progress></span></span></div>
+  </div>
+  <a class="tg-guide__skip" href="#guide-controls">Перейти к подбору ухода</a>
+  <aside class="tg-guide__editorial" aria-label="TOKATLIANN — Skincare as a state of being">
+    <div class="tg-guide__editorial-frame">
+      <img class="tg-guide__editorial-photo" src="assets/images/editorial-natural.png" alt="Портрет модели с кремом на щеке, тёплый свет и натуральные текстуры" width="971" height="1619" fetchpriority="high">
+      <div class="tg-guide__editorial-copy"><p class="tg-guide__editorial-manifesto">Наука.<br>Природа.<br>Видимый<br>результат.</p><div class="tg-guide__editorial-brand"><p>TOKATLIANN</p><span>Skincare as a state of being</span></div></div>
+    </div>
+  </aside>
+  <div class="tg-guide__workspace">
+    <header class="tg-guide__intro">
+      <div class="tg-guide__heading">
+        <p class="tg-guide__eyebrow">Интерактивный гид</p>
+        <h1>GUIDE</h1>
+        <p class="tg-guide__subtitle">Подбор ухода по состоянию кожи</p>
+      </div>
+      <p class="tg-guide__intro-note">Персональные рекомендации<br>на основе потребностей вашей кожи<br>и образа жизни.</p>
+    </header>
+    <div class="tg-guide__controls" id="guide-controls">
+      <p class="tg-guide__progress" data-guide-progress></p>
+      <div class="tg-guide__groups" data-guide-groups></div>
+      <section class="tg-guide__factors" aria-labelledby="guide-factors-title">
+        <h2 id="guide-factors-title">Факторы</h2>
+        <p>Учитывайте образ жизни и внешние условия</p>
+        <div class="tg-guide__factor-list" data-guide-factors></div>
+      </section>
+      <nav class="tg-guide__contexts" aria-label="Отдельные рекомендации по вашему выбору" data-guide-contexts hidden></nav>
+      <section class="tg-guide__result" aria-labelledby="guide-recommendation-title" data-guide-result></section>
+      <p class="tg-guide__disclaimer">Демо-подбор: схемы ухода и соответствие товаров состояниям — тестовые. Названия, фото и ссылки товаров — из каталога TOKATLIANN.</p>
+      <p class="tg-guide__sr" role="status" aria-live="polite" aria-atomic="true" data-guide-status></p>
+      <noscript><style>.tg-guide__preloader{display:none!important}</style><p class="tg-guide__noscript">Включите JavaScript, чтобы выбирать состояния кожи и просматривать рекомендации.</p></noscript>
+    </div>
+  </div>
+</main>
+
+<footer class="preview-shell footer">
+			<div class="__container">
+				<div class="footer__top">
+					<a href="https://tokatliann.ru/" class="footer__logo">
+						<img src="assets/images/tokatliann.svg" alt="tokatliann">
+					</a>
+					<div class="footer__menu menu">
+						<ul class="footer__list">
+	<li class="menu__item"><a href="https://tokatliann.ru/showroom/" class="menu__link ">Шоурум</a></li>
+	<li class="menu__item"><a href="https://tokatliann.ru/about/brand/" class="menu__link ">О бренде</a></li>
+	<li class="menu__item"><a href="https://tokatliann.ru/about/burn/" class="menu__link ">После прочтения — сжечь</a></li>
+	<li class="menu__item"><a href="https://tokatliann.ru/services/transfer/" class="menu__link ">Бьюти-трансфер</a></li>
+	<li class="menu__item"><a href="https://tokatliann.ru/help/" class="menu__link ">Мы поможем</a></li>
+	<li class="menu__item"><a href="https://tokatliann.ru/blog/" class="menu__link ">Блог</a></li>
+</ul>
+					</div>
+					<div class="footer__socials">
+						<a href="https://t.me/boost/ynakablookax" class="footer__social" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+	<img src="assets/images/telegram.svg" alt="Telegram">
+</a>
+<a href="https://instagram.com/tm.tokatliann" class="footer__social" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+	<img src="assets/images/instagram.svg" alt="Instagram">
+</a>
+<a href="https://max.ru/channel_tokatliann" class="footer__social" aria-label="MAX" target="_blank" rel="noopener noreferrer">
+	<img src="assets/images/MAX.svg" alt="MAX">
+</a>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__copy">
+						©2026 tokatliann
+					</div>
+					<div class="footer__legal">
+						<div class="footer__company">
+							ИП Маслякова Светлана Сергеевна<br>
+ИНН: 222211198432
+						</div>
+						<div class="footer__links">
+							<a href="https://tokatliann.ru/policy/" class="footer__link">Политика обработки персональных данных</a>
+							<a href="https://tokatliann.ru/offer/" class="footer__link">Публичная оферта</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+</body></html>
