@@ -18,10 +18,9 @@ window.TokatliannGuideData = {
     {
       "id": "color",
       "title": "Цвет кожи",
-      "hint": "Пигментация, тусклость и неравномерный тон",
+      "hint": "Пигментация и неравномерный тон",
       "conditions": [
         "pigmentation",
-        "dullness",
         "uneven-tone",
         "post-marks"
       ]
@@ -178,28 +177,6 @@ window.TokatliannGuideData = {
       "imageAlt": "Воздушная очищающая пенка"
     },
     {
-      "id": "dullness",
-      "label": "Тусклость",
-      "description": "Если кожа выглядит менее свежей, можно рассмотреть её повседневную рутину отдельно от пигментации.",
-      "more": "Демонстрационные данные: недостаток естественного сияния. Этот сценарий иллюстрирует работу раздела. Состав средств, их совместимость и частоту применения необходимо согласовать при наполнении.",
-      "signs": [
-        {
-          "label": "Уставший вид",
-          "text": "Уставший вид — пример субъективного или визуального проявления. Пояснение тестовое, не является диагнозом."
-        },
-        {
-          "label": "Недостаток сияния",
-          "text": "Недостаток сияния — пример субъективного или визуального проявления. Пояснение тестовое, не является диагнозом."
-        },
-        {
-          "label": "Сероватый тон",
-          "text": "Сероватый тон — пример субъективного или визуального проявления. Пояснение тестовое, не является диагнозом."
-        }
-      ],
-      "image": "assets/images/gel-hq.png",
-      "imageAlt": "Прозрачная гелевая текстура"
-    },
-    {
       "id": "uneven-tone",
       "label": "Неровный тон",
       "description": "В этом демо-сценарии неравномерный оттенок рассматривается самостоятельно, без объединения с другими состояниями.",
@@ -293,11 +270,6 @@ window.TokatliannGuideData = {
       "id": "flight",
       "label": "Самолёт",
       "icon": "plane"
-    },
-    {
-      "id": "massage",
-      "label": "Массаж лица",
-      "icon": "hand"
     },
     {
       "id": "sauna",
@@ -790,85 +762,6 @@ window.TokatliannGuideData = {
         ]
       }
     },
-    "massage": {
-      "id": "massage",
-      "title": "Отдельная рутина для массажа лица",
-      "description": "Пример последовательности до процедуры и после неё. Средство для массажа будет назначено отдельно.",
-      "benefits": [
-        "Подготовка",
-        "Этап массажа",
-        "После процедуры"
-      ],
-      "productId": "demo-massage",
-      "routine": [
-        {
-          "title": "Подготовка",
-          "note": "Очищение кожи",
-          "image": "assets/images/foam-hq.png"
-        },
-        {
-          "title": "Массаж",
-          "note": "Средство не назначено",
-          "image": "assets/images/serum-hq.png"
-        },
-        {
-          "title": "После массажа",
-          "note": "Завершение процедуры",
-          "image": "assets/images/gel-hq.png"
-        },
-        {
-          "title": "Уход",
-          "note": "По протоколу процедуры",
-          "image": "assets/images/cream-hq.png"
-        }
-      ],
-      "routines": {
-        "morning": [
-          {
-            "title": "Подготовка",
-            "note": "Очищение кожи",
-            "image": "assets/images/foam-hq.png"
-          },
-          {
-            "title": "Массаж",
-            "note": "Средство не назначено",
-            "image": "assets/images/serum-hq.png"
-          },
-          {
-            "title": "После массажа",
-            "note": "Завершение процедуры",
-            "image": "assets/images/gel-hq.png"
-          },
-          {
-            "title": "Уход",
-            "note": "По протоколу процедуры",
-            "image": "assets/images/cream-hq.png"
-          }
-        ],
-        "evening": [
-          {
-            "title": "Подготовка",
-            "note": "Очищение кожи",
-            "image": "assets/images/foam-hq.png"
-          },
-          {
-            "title": "Массаж",
-            "note": "Средство не назначено",
-            "image": "assets/images/serum-hq.png"
-          },
-          {
-            "title": "После массажа",
-            "note": "Завершение процедуры",
-            "image": "assets/images/gel-hq.png"
-          },
-          {
-            "title": "Уход",
-            "note": "Вечерний вариант",
-            "image": "assets/images/cream-hq.png"
-          }
-        ]
-      }
-    },
     "sauna": {
       "id": "sauna",
       "title": "Спокойный уход после банных процедур",
@@ -1195,85 +1088,6 @@ window.TokatliannGuideData = {
         "Комфорт кожи"
       ],
       "productId": "demo-roughness",
-      "routine": [
-        {
-          "title": "Очищение",
-          "note": "Мягкое начало",
-          "image": "assets/images/foam-hq.png"
-        },
-        {
-          "title": "Основной уход",
-          "note": "Основной этап",
-          "image": "assets/images/serum-hq.png"
-        },
-        {
-          "title": "Увлажнение",
-          "note": "По потребности",
-          "image": "assets/images/gel-hq.png"
-        },
-        {
-          "title": "SPF (днём)",
-          "note": "Дневная схема",
-          "image": "assets/images/cream-hq.png"
-        }
-      ],
-      "routines": {
-        "morning": [
-          {
-            "title": "Очищение",
-            "note": "Мягкое начало",
-            "image": "assets/images/foam-hq.png"
-          },
-          {
-            "title": "Основной уход",
-            "note": "Основной этап",
-            "image": "assets/images/serum-hq.png"
-          },
-          {
-            "title": "Увлажнение",
-            "note": "По потребности",
-            "image": "assets/images/gel-hq.png"
-          },
-          {
-            "title": "SPF (днём)",
-            "note": "Дневная схема",
-            "image": "assets/images/cream-hq.png"
-          }
-        ],
-        "evening": [
-          {
-            "title": "Очищение",
-            "note": "Вечерний этап",
-            "image": "assets/images/foam-hq.png"
-          },
-          {
-            "title": "Основной уход",
-            "note": "Вечерний этап",
-            "image": "assets/images/serum-hq.png"
-          },
-          {
-            "title": "Увлажнение",
-            "note": "После очищения",
-            "image": "assets/images/gel-hq.png"
-          },
-          {
-            "title": "Завершение",
-            "note": "Вечерняя рутина",
-            "image": "assets/images/cream-hq.png"
-          }
-        ]
-      }
-    },
-    "dullness": {
-      "id": "dullness",
-      "title": "Свежесть тона в ежедневной рутине",
-      "description": "Если кожа выглядит менее свежей, можно рассмотреть её повседневную рутину отдельно от пигментации.",
-      "benefits": [
-        "Деликатное начало",
-        "Регулярная рутина",
-        "Комфорт кожи"
-      ],
-      "productId": "demo-dullness",
       "routine": [
         {
           "title": "Очищение",
@@ -1757,22 +1571,6 @@ window.TokatliannGuideData = {
       ],
       "demoAssignment": true
     },
-    "demo-massage": {
-      "id": "demo-massage",
-      "name": "Тоник для лица с ниацинамидом и муцином улитки омолаживающий",
-      "image": "assets/images/catalog-4.jpg",
-      "imageAlt": "Тоник для лица с ниацинамидом и муцином улитки омолаживающий",
-      "detailUrl": "https://tokatliann.ru/showroom/tonik-dlya-litsa-s-niatsinamidom-i-mutsinom-ulitki/",
-      "buyUrl": "https://tokatliann.ru/showroom/tonik-dlya-litsa-s-niatsinamidom-i-mutsinom-ulitki/",
-      "isDemo": false,
-      "catalogId": null,
-      "sourceImage": "https://tokatliann.ru/upload/iblock/afa/rkc375155rh69ygmdfu4alcziqjekryq.jpg",
-      "dimensions": [
-        1254,
-        1254
-      ],
-      "demoAssignment": true
-    },
     "demo-sauna": {
       "id": "demo-sauna",
       "name": "Сыворотка-эмульсия для лица с церамидами, ниацинамидом и гиалуроновой кислотой clean-girl-барьер",
@@ -1850,22 +1648,6 @@ window.TokatliannGuideData = {
       "dimensions": [
         1536,
         1024
-      ],
-      "demoAssignment": true
-    },
-    "demo-dullness": {
-      "id": "demo-dullness",
-      "name": "Тоник для лица с гиалуроновой кислотой и аминокислотами увлажняющий",
-      "image": "assets/images/catalog-3.jpg",
-      "imageAlt": "Тоник для лица с гиалуроновой кислотой и аминокислотами увлажняющий",
-      "detailUrl": "https://tokatliann.ru/showroom/tonik-dlya-litsa-s-gialuronovoy-kislotoy-i-aminokislotami/",
-      "buyUrl": "https://tokatliann.ru/showroom/tonik-dlya-litsa-s-gialuronovoy-kislotoy-i-aminokislotami/",
-      "isDemo": false,
-      "catalogId": null,
-      "sourceImage": "https://tokatliann.ru/upload/iblock/6d7/wl5svus0pn9vxjc6hcsfuvqhai0pdhu1.jpg",
-      "dimensions": [
-        1254,
-        1254
       ],
       "demoAssignment": true
     },
