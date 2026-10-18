@@ -1,6 +1,6 @@
 /* TOKATLIANN /guide/. All rules are scoped to the guide; no global resets.
    Forum / PT Serif, #2b2b2b / ivory / #ffefdf and pill controls are inherited
-   from the public store_custom template (see ANALYSIS.md). */
+   from the public store_custom template. */
 .tg-guide { --tg-ink:#2b2b2b; --tg-muted:#686059; --tg-paper:#faf7f1; --tg-peach:#ffefdf; --tg-line:#e6d9cc; display:grid; grid-template-columns:43.4% minmax(0,1fr); background:var(--tg-paper); color:var(--tg-ink); font:400 17px/1.4 Forum,Georgia,'Times New Roman',serif; isolation:isolate; width:100%; -webkit-font-smoothing:antialiased; }
 .tg-guide *, .tg-guide *::before, .tg-guide *::after { box-sizing:border-box; }
 .tg-guide [hidden] { display:none !important; }
@@ -257,3 +257,10 @@
 
 .tg-guide__step-name,.tg-guide__step-note { overflow-wrap:anywhere; }
 @media(max-width:47.99875em) { .tg-guide__routine ol { grid-template-columns:minmax(0,1fr); gap:16px; } .tg-guide__routine li { grid-template-columns:27px 46px minmax(0,1fr); gap:10px; } .tg-guide__routine-image { width:46px; height:46px; } }
+
+/* Prepare the first paint before deferred scripts run. No-JS is restored in noscript. */
+@media(prefers-reduced-motion:no-preference) {
+ .tg-guide[data-guide-intro="pending"] :is(.tg-guide__heading,.tg-guide__intro-note,.tg-guide__group:not([data-locked="true"]),.tg-guide__factors) { opacity:0; visibility:hidden; transform:translateY(9px); }
+ .tg-guide[data-guide-intro="pending"] .tg-guide__preloader-inner { opacity:0; visibility:hidden; }
+ .tg-guide[data-guide-intro="pending"] [data-guide-load-progress] { transform:scaleX(0); }
+}

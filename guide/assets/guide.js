@@ -5,7 +5,7 @@
  function init(){
   var root=document.querySelector('[data-tokatliann-guide]');
   if(!root||root.dataset.guideReady==='true')return;
-  var motion=window.TokatliannGuideMotion||{reveal:function(e,open){e.hidden=!open;},swap:function(e,paint){paint();},start:function(){var el=root.querySelector('[data-guide-preloader]');if(el)setTimeout(function(){el.hidden=true;root.dataset.guideMotionReady='true';},400);}};
+  var motion=window.TokatliannGuideMotion||{reveal:function(e,open){e.hidden=!open;},swap:function(e,paint){paint();},start:function(){root.removeAttribute('data-guide-intro');var el=root.querySelector('[data-guide-preloader]');if(el)setTimeout(function(){el.hidden=true;root.dataset.guideMotionReady='true';},400);}};
   var data,json=document.getElementById('tokatliann-guide-data');
   try{data=json?JSON.parse(json.textContent):window.TokatliannGuideData;if(!data||!Array.isArray(data.groups)||!data.groups.length||!Array.isArray(data.conditions)||!Array.isArray(data.factors)||!data.recommendations||!data.products)throw new Error('Invalid guide data');}catch(error){showError();motion.start(root);return;}
   root.dataset.guideReady='true';

@@ -29,24 +29,32 @@
  }
  function start(root){
   if(started.has(root))return;started.add(root);
-  var loader=root.querySelector('[data-guide-preloader]');if(!loader)return;
+  var loader=root.querySelector('[data-guide-preloader]');if(!loader){root.removeAttribute('data-guide-intro');return;}
   var controls=root.querySelector('[data-guide-controls]')||root.querySelector('.tg-guide__workspace');
   var startedAt=performance.now();root.dataset.preloaderStarted=String(startedAt);controls.inert=true;
   var inner=loader.querySelector('.tg-guide__preloader-inner'),bar=loader.querySelector('[data-guide-load-progress]');
-  var ticker;
-  if(animated()){gs.fromTo(inner,{opacity:0,y:8},{opacity:1,y:0,duration:.36,ease:'power2.out'});ticker=gs.fromTo(bar,{scaleX:0},{scaleX:.88,duration:1.1,ease:'power2.out'});}
+  var entrance=root.querySelectorAll('.tg-guide__heading,.tg-guide__intro-note,.tg-guide__group:not([data-locked="true"]),.tg-guide__factors');
+  var ticker,prepared=animated();
+  if(prepared)gs.set(entrance,{autoAlpha:0,y:9});
+  // Release the CSS gate only after GSAP owns the same hidden starting state.
+  root.dataset.guideIntro='loading';
+  if(prepared){gs.fromTo(inner,{autoAlpha:0,y:8},{autoAlpha:1,y:0,duration:.36,ease:'power2.out'});ticker=gs.fromTo(bar,{scaleX:0},{scaleX:.88,duration:1.1,ease:'power2.out'});}
   var photos=Array.from(root.querySelectorAll('img')).map(function(img){return img.decode?img.decode().catch(function(){}):Promise.resolve();});
   var fontReady=document.fonts?document.fonts.ready:Promise.resolve();
   var ready=Promise.race([Promise.all(photos.concat([fontReady])),new Promise(function(resolve){setTimeout(resolve,2800);})]);
   Promise.all([ready,new Promise(function(resolve){setTimeout(resolve,400);})]).then(function(){
    if(ticker)ticker.kill();root.dataset.preloaderHold=String(Math.round(performance.now()-startedAt));
    function finish(){loader.hidden=true;controls.inert=false;root.dataset.preloaderFinished=String(performance.now());
-    if(animated())gs.fromTo(root.querySelectorAll('.tg-guide__heading,.tg-guide__intro-note,.tg-guide__group:not([data-locked="true"]),.tg-guide__factors'),{opacity:.3,y:9},{opacity:1,y:0,duration:.65,stagger:.055,ease:'power2.out',clearProps:'opacity,transform',onComplete:function(){root.dataset.guideMotionReady='true';}});else root.dataset.guideMotionReady='true';
+    function complete(){root.dataset.guideIntro='complete';root.dataset.guideMotionReady='true';}
+    if(prepared&&animated()){
+     root.dataset.guideIntro='entering';
+     gs.to(entrance,{autoAlpha:1,y:0,duration:.65,stagger:.055,ease:'power2.out',clearProps:'opacity,visibility,transform',onComplete:complete});
+    }else{if(prepared)gs.set(entrance,{clearProps:'opacity,visibility,transform'});complete();}
    }
    if(animated()){gs.timeline({onComplete:finish}).to(bar,{scaleX:1,duration:.14,ease:'power1.out'}).to(inner,{opacity:0,y:-5,duration:.24,ease:'power1.in'},.1).to(loader,{opacity:0,duration:.42,ease:'power2.inOut'},.18);}else{finish();}
   });
  }
  window.TokatliannGuideMotion={reveal:reveal,swap:swap,start:start};
  function fallback(){var root=document.querySelector('[data-tokatliann-guide]');if(root)setTimeout(function(){start(root);},0);}
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',fallback,{once:true});else fallback();
+ if(document.readyState!=='complete')document.addEventListener('DOMContentLoaded',fallback,{once:true});else fallback();
 }());
