@@ -7,13 +7,12 @@ window.TokatliannGuideData = {
     {
       "id": "texture",
       "title": "Текстура кожи",
-      "hint": "Сухость, обезвоженность, рельеф и упругость",
+      "hint": "Сухость, обезвоженность и неровный рельеф",
       "conditions": [
         "dryness",
         "wrinkles",
         "dehydration",
-        "roughness",
-        "elasticity"
+        "roughness"
       ]
     },
     {
@@ -30,12 +29,11 @@ window.TokatliannGuideData = {
     {
       "id": "secretion",
       "title": "Секреция кожи",
-      "hint": "Блеск, поры, воспаления и чувствительность",
+      "hint": "Жирный блеск, воспаления и чувствительность",
       "conditions": [
         "inflammation",
         "acne",
         "oiliness",
-        "pores",
         "reactivity"
       ]
     }
@@ -180,28 +178,6 @@ window.TokatliannGuideData = {
       "imageAlt": "Воздушная очищающая пенка"
     },
     {
-      "id": "elasticity",
-      "label": "Потеря упругости",
-      "description": "Рассмотрите отдельный пример последовательного ухода. Это тестовый сценарий, без назначения активных компонентов.",
-      "more": "Демонстрационные данные: изменение ощущения плотности. Этот сценарий иллюстрирует работу раздела. Состав средств, их совместимость и частоту применения необходимо согласовать при наполнении.",
-      "signs": [
-        {
-          "label": "Менее упругая кожа",
-          "text": "Менее упругая кожа — пример субъективного или визуального проявления. Пояснение тестовое, не является диагнозом."
-        },
-        {
-          "label": "Изменение контура",
-          "text": "Изменение контура — пример субъективного или визуального проявления. Пояснение тестовое, не является диагнозом."
-        },
-        {
-          "label": "Тонкие складки",
-          "text": "Тонкие складки — пример субъективного или визуального проявления. Пояснение тестовое, не является диагнозом."
-        }
-      ],
-      "image": "assets/images/serum-hq.png",
-      "imageAlt": "Капли сыворотки"
-    },
-    {
       "id": "dullness",
       "label": "Тусклость",
       "description": "Если кожа выглядит менее свежей, можно рассмотреть её повседневную рутину отдельно от пигментации.",
@@ -290,28 +266,6 @@ window.TokatliannGuideData = {
       "imageAlt": "Прозрачная гелевая текстура"
     },
     {
-      "id": "pores",
-      "label": "Расширенные поры",
-      "description": "Видимость пор рассматривается отдельно от акне. Демо-схема не обещает изменения их размера.",
-      "more": "Демонстрационные данные: заметная текстура пор. Этот сценарий иллюстрирует работу раздела. Состав средств, их совместимость и частоту применения необходимо согласовать при наполнении.",
-      "signs": [
-        {
-          "label": "Заметные поры",
-          "text": "Заметные поры — пример субъективного или визуального проявления. Пояснение тестовое, не является диагнозом."
-        },
-        {
-          "label": "Неоднородный рельеф",
-          "text": "Неоднородный рельеф — пример субъективного или визуального проявления. Пояснение тестовое, не является диагнозом."
-        },
-        {
-          "label": "Т-зона",
-          "text": "Т-зона — пример субъективного или визуального проявления. Пояснение тестовое, не является диагнозом."
-        }
-      ],
-      "image": "assets/images/foam-hq.png",
-      "imageAlt": "Воздушная очищающая пенка"
-    },
-    {
       "id": "reactivity",
       "label": "Чувствительность",
       "description": "Выберите знакомое проявление, чтобы посмотреть пояснение. Здесь показана короткая тестовая рутина без активных назначений.",
@@ -339,11 +293,6 @@ window.TokatliannGuideData = {
       "id": "flight",
       "label": "Самолёт",
       "icon": "plane"
-    },
-    {
-      "id": "workout",
-      "label": "Тренировка",
-      "icon": "dumbbell"
     },
     {
       "id": "massage",
@@ -841,85 +790,6 @@ window.TokatliannGuideData = {
         ]
       }
     },
-    "workout": {
-      "id": "workout",
-      "title": "Уход в ритме вашей тренировки",
-      "description": "Рассмотрите этапы до нагрузки и после неё. Эта рекомендация относится только к выбранному фактору.",
-      "benefits": [
-        "До тренировки",
-        "После нагрузки",
-        "Завершение ухода"
-      ],
-      "productId": "demo-workout",
-      "routine": [
-        {
-          "title": "До тренировки",
-          "note": "Подготовка кожи",
-          "image": "assets/images/foam-hq.png"
-        },
-        {
-          "title": "После нагрузки",
-          "note": "Мягкое очищение",
-          "image": "assets/images/serum-hq.png"
-        },
-        {
-          "title": "Увлажнение",
-          "note": "После очищения",
-          "image": "assets/images/gel-hq.png"
-        },
-        {
-          "title": "SPF (днём)",
-          "note": "Если выходите на улицу",
-          "image": "assets/images/cream-hq.png"
-        }
-      ],
-      "routines": {
-        "morning": [
-          {
-            "title": "До тренировки",
-            "note": "Подготовка кожи",
-            "image": "assets/images/foam-hq.png"
-          },
-          {
-            "title": "После нагрузки",
-            "note": "Мягкое очищение",
-            "image": "assets/images/serum-hq.png"
-          },
-          {
-            "title": "Увлажнение",
-            "note": "После очищения",
-            "image": "assets/images/gel-hq.png"
-          },
-          {
-            "title": "SPF (днём)",
-            "note": "Если выходите на улицу",
-            "image": "assets/images/cream-hq.png"
-          }
-        ],
-        "evening": [
-          {
-            "title": "До тренировки",
-            "note": "Подготовка кожи",
-            "image": "assets/images/foam-hq.png"
-          },
-          {
-            "title": "После нагрузки",
-            "note": "Мягкое очищение",
-            "image": "assets/images/serum-hq.png"
-          },
-          {
-            "title": "Увлажнение",
-            "note": "После очищения",
-            "image": "assets/images/gel-hq.png"
-          },
-          {
-            "title": "SPF (днём)",
-            "note": "Вечерний вариант",
-            "image": "assets/images/cream-hq.png"
-          }
-        ]
-      }
-    },
     "massage": {
       "id": "massage",
       "title": "Отдельная рутина для массажа лица",
@@ -1394,85 +1264,6 @@ window.TokatliannGuideData = {
         ]
       }
     },
-    "elasticity": {
-      "id": "elasticity",
-      "title": "Регулярная рутина для упругости кожи",
-      "description": "Рассмотрите отдельный пример последовательного ухода. Это тестовый сценарий, без назначения активных компонентов.",
-      "benefits": [
-        "Деликатное начало",
-        "Регулярная рутина",
-        "Комфорт кожи"
-      ],
-      "productId": "demo-elasticity",
-      "routine": [
-        {
-          "title": "Очищение",
-          "note": "Мягкое начало",
-          "image": "assets/images/foam-hq.png"
-        },
-        {
-          "title": "Основной уход",
-          "note": "Основной этап",
-          "image": "assets/images/serum-hq.png"
-        },
-        {
-          "title": "Увлажнение",
-          "note": "По потребности",
-          "image": "assets/images/gel-hq.png"
-        },
-        {
-          "title": "SPF (днём)",
-          "note": "Дневная схема",
-          "image": "assets/images/cream-hq.png"
-        }
-      ],
-      "routines": {
-        "morning": [
-          {
-            "title": "Очищение",
-            "note": "Мягкое начало",
-            "image": "assets/images/foam-hq.png"
-          },
-          {
-            "title": "Основной уход",
-            "note": "Основной этап",
-            "image": "assets/images/serum-hq.png"
-          },
-          {
-            "title": "Увлажнение",
-            "note": "По потребности",
-            "image": "assets/images/gel-hq.png"
-          },
-          {
-            "title": "SPF (днём)",
-            "note": "Дневная схема",
-            "image": "assets/images/cream-hq.png"
-          }
-        ],
-        "evening": [
-          {
-            "title": "Очищение",
-            "note": "Вечерний этап",
-            "image": "assets/images/foam-hq.png"
-          },
-          {
-            "title": "Основной уход",
-            "note": "Вечерний этап",
-            "image": "assets/images/serum-hq.png"
-          },
-          {
-            "title": "Увлажнение",
-            "note": "После очищения",
-            "image": "assets/images/gel-hq.png"
-          },
-          {
-            "title": "Завершение",
-            "note": "Вечерняя рутина",
-            "image": "assets/images/cream-hq.png"
-          }
-        ]
-      }
-    },
     "dullness": {
       "id": "dullness",
       "title": "Свежесть тона в ежедневной рутине",
@@ -1789,85 +1580,6 @@ window.TokatliannGuideData = {
         ]
       }
     },
-    "pores": {
-      "id": "pores",
-      "title": "Внимание к очищению и комфорту",
-      "description": "Видимость пор рассматривается отдельно от акне. Демо-схема не обещает изменения их размера.",
-      "benefits": [
-        "Деликатное начало",
-        "Регулярная рутина",
-        "Комфорт кожи"
-      ],
-      "productId": "demo-pores",
-      "routine": [
-        {
-          "title": "Очищение",
-          "note": "Мягкое начало",
-          "image": "assets/images/foam-hq.png"
-        },
-        {
-          "title": "Основной уход",
-          "note": "Основной этап",
-          "image": "assets/images/serum-hq.png"
-        },
-        {
-          "title": "Увлажнение",
-          "note": "По потребности",
-          "image": "assets/images/gel-hq.png"
-        },
-        {
-          "title": "SPF (днём)",
-          "note": "Дневная схема",
-          "image": "assets/images/cream-hq.png"
-        }
-      ],
-      "routines": {
-        "morning": [
-          {
-            "title": "Очищение",
-            "note": "Мягкое начало",
-            "image": "assets/images/foam-hq.png"
-          },
-          {
-            "title": "Основной уход",
-            "note": "Основной этап",
-            "image": "assets/images/serum-hq.png"
-          },
-          {
-            "title": "Увлажнение",
-            "note": "По потребности",
-            "image": "assets/images/gel-hq.png"
-          },
-          {
-            "title": "SPF (днём)",
-            "note": "Дневная схема",
-            "image": "assets/images/cream-hq.png"
-          }
-        ],
-        "evening": [
-          {
-            "title": "Очищение",
-            "note": "Вечерний этап",
-            "image": "assets/images/foam-hq.png"
-          },
-          {
-            "title": "Основной уход",
-            "note": "Вечерний этап",
-            "image": "assets/images/serum-hq.png"
-          },
-          {
-            "title": "Увлажнение",
-            "note": "После очищения",
-            "image": "assets/images/gel-hq.png"
-          },
-          {
-            "title": "Завершение",
-            "note": "Вечерняя рутина",
-            "image": "assets/images/cream-hq.png"
-          }
-        ]
-      }
-    },
     "reactivity": {
       "id": "reactivity",
       "title": "Деликатность в каждом этапе ухода",
@@ -2045,22 +1757,6 @@ window.TokatliannGuideData = {
       ],
       "demoAssignment": true
     },
-    "demo-workout": {
-      "id": "demo-workout",
-      "name": "Тоник для лица с гиалуроновой кислотой и аминокислотами увлажняющий",
-      "image": "assets/images/catalog-3.jpg",
-      "imageAlt": "Тоник для лица с гиалуроновой кислотой и аминокислотами увлажняющий",
-      "detailUrl": "https://tokatliann.ru/showroom/tonik-dlya-litsa-s-gialuronovoy-kislotoy-i-aminokislotami/",
-      "buyUrl": "https://tokatliann.ru/showroom/tonik-dlya-litsa-s-gialuronovoy-kislotoy-i-aminokislotami/",
-      "isDemo": false,
-      "catalogId": null,
-      "sourceImage": "https://tokatliann.ru/upload/iblock/6d7/wl5svus0pn9vxjc6hcsfuvqhai0pdhu1.jpg",
-      "dimensions": [
-        1254,
-        1254
-      ],
-      "demoAssignment": true
-    },
     "demo-massage": {
       "id": "demo-massage",
       "name": "Тоник для лица с ниацинамидом и муцином улитки омолаживающий",
@@ -2157,22 +1853,6 @@ window.TokatliannGuideData = {
       ],
       "demoAssignment": true
     },
-    "demo-elasticity": {
-      "id": "demo-elasticity",
-      "name": "Тоник для лица с АНА-кислотами освежающий",
-      "image": "assets/images/catalog-2.jpg",
-      "imageAlt": "Тоник для лица с АНА-кислотами освежающий",
-      "detailUrl": "https://tokatliann.ru/showroom/tonik-dlya-litsa-osvezhayushchiy-s-ana-kislotami/",
-      "buyUrl": "https://tokatliann.ru/showroom/tonik-dlya-litsa-osvezhayushchiy-s-ana-kislotami/",
-      "isDemo": false,
-      "catalogId": null,
-      "sourceImage": "https://tokatliann.ru/upload/iblock/bf5/nzkfrp4tn7pmy0228jq6g82eg69b7d3v.jpg",
-      "dimensions": [
-        1254,
-        1254
-      ],
-      "demoAssignment": true
-    },
     "demo-dullness": {
       "id": "demo-dullness",
       "name": "Тоник для лица с гиалуроновой кислотой и аминокислотами увлажняющий",
@@ -2231,22 +1911,6 @@ window.TokatliannGuideData = {
       "isDemo": false,
       "catalogId": null,
       "sourceImage": "https://tokatliann.ru/upload/iblock/bf5/nzkfrp4tn7pmy0228jq6g82eg69b7d3v.jpg",
-      "dimensions": [
-        1254,
-        1254
-      ],
-      "demoAssignment": true
-    },
-    "demo-pores": {
-      "id": "demo-pores",
-      "name": "Тоник для лица с гиалуроновой кислотой и аминокислотами увлажняющий",
-      "image": "assets/images/catalog-3.jpg",
-      "imageAlt": "Тоник для лица с гиалуроновой кислотой и аминокислотами увлажняющий",
-      "detailUrl": "https://tokatliann.ru/showroom/tonik-dlya-litsa-s-gialuronovoy-kislotoy-i-aminokislotami/",
-      "buyUrl": "https://tokatliann.ru/showroom/tonik-dlya-litsa-s-gialuronovoy-kislotoy-i-aminokislotami/",
-      "isDemo": false,
-      "catalogId": null,
-      "sourceImage": "https://tokatliann.ru/upload/iblock/6d7/wl5svus0pn9vxjc6hcsfuvqhai0pdhu1.jpg",
       "dimensions": [
         1254,
         1254

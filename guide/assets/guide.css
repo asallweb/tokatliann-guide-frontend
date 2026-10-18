@@ -61,8 +61,8 @@
 .tg-guide__factors h2 { font-size:29px; line-height:1.1; padding-left:12px; }
 .tg-guide__factors>p { font-size:18px; color:var(--tg-muted); padding-left:12px; margin-bottom:9px; }
 .tg-guide__factor-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:7px; }
-@media(min-width:1281px) { .tg-guide__factor-list { grid-template-columns:repeat(6,minmax(0,1fr)); gap:6px; } .tg-guide__factor { gap:6px; padding:7px 6px; font-size:16px !important; } .tg-guide__factor img { width:20px; height:20px; } }
-.tg-guide__factor { display:flex; align-items:center; justify-content:center; gap:10px; min-height:45px; padding:8px 9px; border:1px solid var(--tg-line); border-radius:100px; background:rgba(250,247,241,.65); font-size:17px !important; line-height:1.2 !important; transition:background-color .28s,border-color .28s; }
+@media(min-width:1281px) { .tg-guide__factor-list { grid-template-columns:repeat(5,minmax(0,1fr)); gap:6px; } .tg-guide__factor { gap:6px; padding:7px 6px; font-size:16px !important; } .tg-guide__factor img { width:20px; height:20px; } }
+.tg-guide__factor { display:flex; align-items:center; justify-content:flex-start; text-align:left; gap:10px; min-height:45px; padding:8px 12px; border:1px solid var(--tg-line); border-radius:100px; background:rgba(250,247,241,.65); font-size:17px !important; line-height:1.2 !important; transition:background-color .28s,border-color .28s; }
 .tg-guide__factor img { height:23px; width:23px; flex-shrink:0; }
 .tg-guide__factor[aria-pressed=true] { background:#f1e2d3; border-color:#8b735d; }
 .tg-guide__contexts { display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin:12px 0; font-size:15px; }
@@ -123,7 +123,7 @@
  .tg-guide__result { grid-template-columns:minmax(0,1fr) 245px; }
  .tg-guide__recommendation { min-height:370px; }
  .tg-guide__result h2 { font-size:29px; }
- .tg-guide__factor-list { grid-template-columns:repeat(6,minmax(0,1fr)); }
+ .tg-guide__factor-list { grid-template-columns:repeat(5,minmax(0,1fr)); }
 }
 @media(max-width:80.06125em) {
  .tg-guide { grid-template-columns:38% minmax(0,1fr); }
